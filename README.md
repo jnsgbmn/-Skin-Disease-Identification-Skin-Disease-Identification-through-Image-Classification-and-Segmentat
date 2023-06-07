@@ -5,8 +5,8 @@ A cross platform based application that detect Viral skin lesions Disease. With 
 
 
 # Feature Extraction
-This involved creating two separate files: one for the dataset itself and another for labels. The dataset CSV file lists all the images in the skin diseases dataset along with their file paths and any additional relevant metadata.we created data loaders for the training dataset to label groups of pixels of each image. Identification of the infected area helped the developed model to ease the prediction of the classifier to find the disease.![image](https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/cd60cace-1607-4fbe-a5c5-6666c9d1ddc6)
-![image](https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/75d89ca5-9e95-4324-a3d9-1c2017af9a5c)
+This involved creating two separate files: one for the dataset itself and another for labels. The dataset CSV file lists all the images in the skin diseases dataset along with their file paths and any additional relevant metadata.we created data loaders for the training dataset to label groups of pixels of each image. Identification of the infected area helped the developed model to ease the prediction of the classifier to find the disease.
+
 
 ![image](https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/e521327a-2726-4cf2-ba41-5b76a41c1794)
 
