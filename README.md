@@ -16,6 +16,8 @@ This involved creating two separate files: one for the dataset itself and anothe
 
 
 # Architecture of ResNet152 
+the Architecture of ResNet-152 in this study. ResNet-152 is a type of neural network architecture used for image classification containing 152 layers. This architecture consists of an input layer with RGB channels of size 224x224x3, followed by several convolutional layers with varying filter sizes and channel numbers. There were four stages, each with a stride of 2, that down-sample feature maps. Within each stage, there were residual blocks that contained two 3x3 convolutional layers, a shortcut connection, and batch normalization with Rectified Linear Unit (ReLU) activation function.
+
 <img width="469" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/a8d6d4ee-057e-4373-af26-567e1350727c">
 
 # Analysis Cases
