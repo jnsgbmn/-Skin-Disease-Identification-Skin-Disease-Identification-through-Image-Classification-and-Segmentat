@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Flask</title>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='src/input.css')}}" />
+</head>
+
+<body>
+    <div class="w-full bg-[#FFF8E7]">
+        <div class="w-full mx-auto bg-[#FFF8E7] 2xl:max-w-7xl ">
+            <div x-data="{ open: false }"
+                class="relative flex flex-col w-full p-5 mx-auto bg-[#FFF8E7] md:items-center md:justify-between md:flex-row md:px-6 lg:px-2 ">
+                <div class="flex flex-row items-center justify-between lg:justify-start">
+                    <img class="cursor-pointer   h-[50px]" src="{{url_for('static', filename='/images/logo.png')}}" />
+                    <button @click="open = !open"
+                        class="inline-flex items-center justify-center p-2 text-gray-400 hover:text-black focus:outline-none focus:text-black md:hidden">
+                        <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav :class="{'flex': open, 'hidden': !open}"
+                    class="flex-col flex-grow hidden py-10 md:flex lg:py-0 md:justify-center md:flex-row">
+                    <ul class="space-y-2 list-none md:space-y-0 md:items-center md:inline-flex pr-[100px]">
+                        <li>
+                            <a href="#"
+                                class="px-2 py-8 text-lg text-gray-500 border-b-2 border-transparent lg:px-6 hover:border-[#6BCBB8] md:px-3 hover:text-[#6BCBB8]">
+                                Home
+
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="window.location.href='./dailynews'"
+                                class="px-2 cursor-pointer py-8 text-lg text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text- hover:border-[#6BCBB8]">
+                                Analysis Cases
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="window.location.href='./contact'"
+                                class=" cursor-pointer px-2 py-8 text-lg   text-gray-500 border-b-2 border-transparent lg:px-6 hover:border-[#6BCBB8] md:px-3 hover:text-[#6BCBB8]">
+                                <span class="hidden lg:inline">
+                                    Contact
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="grid justify-center">
+            <div class="text-center mx-auto grid justify-center h-[200px]">
+                <h1 style="font-family: 'Lexend Deca', sans-serif" class="mt-[100px] sm:text-[32px]">
+                    Reduce the infection
+                    <h1 style="font-family: 'Lexend Deca', sans-serif" class="sm:text-[32px]">
+                        rate of Skin lession Diseases
+                    </h1>
+                </h1>
+            </div>
+            <div class="gap-[100px] md:grid-cols-2 mt-10 mb-[50px] max-w-[800px] mx-auto grid flex justify-center">
+                <div data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                    class="cursor-pointer justify center w-[250px] h-[40px] bg-[#6BCBB8] bg-opacity-100 backdrop-blur-md drop-shadow-lg">
+                    <p style="font-family: 'Lexend Deca', sans-serif" class="mt-2 font-h1 text-black text-center">
+                        Upload
+                    </p>
+                </div>
+                <div id="popup-modal" tabindex="-1"
+                    class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+                    <div class="relative w-full h-full max-w-md md:h-auto">
+                        <div class="relative bg-[#FFF8E7] rounded-lg shadow dark:bg-gray-700">
+                            <button type="button"
+                                class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                                data-modal-hide="popup-modal">
+                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                            <div class="p-6">
+                                <form action="/predicts" method=post enctype=multipart/form-data>
+                                    <div class="justify-center flex mt-5">
+
+                                        <img class="h-[50px]"
+                                            src="{{url_for('static', filename='/images/upload.png')}}" />
+                                        <h3 class="ml-4 mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                                            Drag and drop file here <br />
+                                            Limit 200MB per file • JPG, PNG, JPEG, BMP
+                                        </h3>
+                                    </div>
+                                    <dl>
+                                        <input type=file name=file class="ml-[70px] form-control" autocomplete="off"
+                                            required />
+                                    </dl>
+                                    <div data-modal-target="popup-modal3" data-modal-toggle="popup-modal3"
+                                        class="text-center">
+                                        <input style="font-family: 'Lexend Deca', sans-serif" type=submit value=Submit
+                                            class="cursor-pointer mt-7 text-white focus:ring-4 bg-black focus:outline-nonefont-medium text-sm w-[200px] items-center px-5 py-2.5 text-center mr-2 justify-center">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div enctype=multipart/form-data data-modal-target=" popup-modal1" data-modal-toggle="popup-modal1"
+                    class="cursor-pointer justify center w-[250px] h-[40px] bg-black bg-opacity-100 backdrop-blur-md drop-shadow-lg">
+                    <p style="font-family: 'Lexend Deca', sans-serif" class=" mt-2 font-h1 text-white text-center">
+                        Capture
+                    </p>
+                </div>
+
+
+
+                <div id="popup-modal1" tabindex="-1"
+                    class="pr-[260px] fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+                    <div class="relative w-full h-full max-w-md md:h-auto">
+
+                        <form enctype=multipart/form-data method="post" action="{{ url_for('tasks') }}">
+                            <div class="h-[500px] w-[700px] relative bg-[#FFF8E7] rounded-lg shadow dark:bg-gray-700">
+                                <button type="button"
+                                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                                    data-modal-hide="popup-modal1">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                                <img type=vid name=vid src="{{ url_for('video_feed') }}" />
+
+                                <div class="p-6 ">
+                                    <div class=" text-center ">
+                                        <button style=" font-family: 'Lexend Deca' , sans-serif"
+                                            data-modal-hide=" popup-modal" value=Capture name="click"
+                                            class="cursor-pointer text-white bg-black rounded-[20px] text-sm w-[200px] h-[40px] items-center px-5 py-2.5 text-center mr-2 justify-center">
+                                            Capture</button>
+                                    </div>
+                                </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!doctype html>
+        <html>
+
+        <head>
+            <title>Skin Disease Detector</title>
+            <style>
+                .center {
+                    margin: auto;
+                    width: 50%;
+                    padding: 10px;
+                }
+            </style>
+        </head>
+
+        <body>
+            <div class="center">
+                <h1>Skin Disease Detector</h1>
+                <form method="POST" enctype="multipart/form-data">
+                    <p>Select an image to upload:</p>
+                    <input type="file" name="file" accept=".jpg, .jpeg, .png">
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </body>
+
+        </html>
+
+
+
+
+
+        <div class="col-sm">
+
+            <span
+                class="border border-primary text-center d-flex justify-content-center align-items-center align-self-center">
+                <p class=" block">Result:</p>
+
+                <img class=" block w-[200px] justify-center items-center mx-auto" src='{{user_image}}' id="">
+            </span>
+        </div>
+        <div class="text-center d-flex justify-content-center align-items-center align-self-center">
+            <p style="font-family:'Courier New', Courier, monospace; ">
+                <b><span>{{product}}</span></b>
+            </p>
+        </div>
+
+        <section>
+            <div class="items-center px-8 py-12 mx-auto max-w-7xl lg:px-16 md:px-12">
+                <div class="justify-center w-full lg:p-10 max-auto">
+                    <div class="relative flex flex-wrap">
+                        <div class="absolute top-4 left-0 right-0 hidden lg:block h-[1px]">
+                            <div class="h-[1px] w-full bg-black  ">‌</div>
+                        </div>
+                        <div class="z-10 grid w-full mb-4 lg:gap-8 lg:grid-cols-4">
+                            <article class="w-full "><span
+                                    class="z-10 flex items-center justify-center w-8 h-8 text-white bg-black rounded-full step">1</span>
+                                <div>
+                                    <h3 class="mt-8 text-lg font-medium leading-6 text-black lg:mt-10"> Upload & Capture
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="w-full "><span
+                                    class="z-10 flex items-center justify-center w-8 h-8 text-white bg-black rounded-full step">2</span>
+                                <div>
+                                    <h3 class="mt-8 text-lg font-medium leading-6 text-black lg:mt-10">Submit
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="w-full "><span
+                                    class="z-10 flex items-center justify-center w-8 h-8 text-white bg-black rounded-full step">3</span>
+                                <div>
+                                    <h3 class="mt-8 text-lg font-medium leading-6 text-black lg:mt-10">Analyze
+
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="w-full "><span
+                                    class="flex items-center justify-center w-8 h-8 text-white bg-black rounded-full">4</span>
+                                <div>
+                                    <h3 class="mt-8 text-lg font-medium leading-6 text-black lg:mt-10">Model Result
+                                    </h3>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <img src="{{url_for('static', filename='/images/pxl.png')}}" />
+    </div>
+
+    <section>
+        <div class="bg-black  w-full px-5 py-12 mx-auto md:px-12  ">
+            <div class="px-4 pb-12 flex justify-center  max-w-4xl mx-auto ">
+                <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
+                    <div class="flex justify-center col-span-1 px-8">
+                        <img class="max-h-[85px]" src="{{url_for('static', filename='/images/mcmlogo.png')}}"
+                            alt=" logo">
+                    </div>
+                    <div class="flex justify-center col-span-1 px-8">
+                        <img class="max-h-[80px]" src="{{url_for('static', filename='/images/CCIS-logo-emblem.png')}}"
+                            alt=" logo">
+                    </div>
+                    <div class="flex justify-center col-span-1 px-8">
+                        <img class="max-h-[100px]" src="{{url_for('static', filename='/images/final.png')}}"
+                            alt=" logo">
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div
+                class="grid grid-cols-1 justify-center items-center mx-auto  max-w-4xl gap-12 text-center lg:grid-cols-2 lg:gap-24">
+                <p class="text-gray-500 md:mt-5">
+                    Lorem ipsum dolor sit amet. Est nesciunt dicta At magnam debitis aut inventore facilis
+                    aut facilis
+                    Lorem ipsum dolor sit amet. Est nesciunt dicta At magnam debitis aut inventore facilis
+                    aut facilis
+                    pariatur qui quia
+                    ullam aut nulla sequi.
+                </p>
+                <p class="text-gray-500 md:mt-5">
+                    Lorem ipsum dolor sit amet. Est nesciunt dicta At magnam debitis aut inventore facilis
+                    aut facilis
+                    Lorem ipsum dolor sit amet. Est nesciunt dicta At magnam debitis aut inventore facilis
+                    aut facilis
+                    pariatur qui quia
+                    ullam aut nulla sequi.
+                </p>
+            </div>
+
+
+
+
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+
+    </div>
+
+
+</body>
+
+</html>

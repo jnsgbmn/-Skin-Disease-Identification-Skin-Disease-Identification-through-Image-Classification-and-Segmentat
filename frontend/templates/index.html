@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Image Classifier</title>
+</head>
+
+<body>
+    <h1>Image Classifier</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="model">Select a model:</label>
+        <select id="model" name="option">
+            <option value="Resnet152">Resnet152</option>
+            <option value="VGG16">VGG16</option>
+        </select>
+        <br>
+        <br>
+        <label for="image">Select an image:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <p>{{ prediction_text }}</p>
+    <p>{{ result }}</p>
+    <p>{{ description }}</p>
+    <p>{{ symptoms }}</p>
+    <p>{{ causes }}</p>
+    <p>{{ risk_factors }}</p>
+    <p>{{ diagnosis }}</p>
+    <p>{{ treatment }}</p>
+</body>
+
+</html>
