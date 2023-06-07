@@ -13,6 +13,8 @@ This involved creating two separate files: one for the dataset itself and anothe
 <img width="168" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/195134ce-c1f1-4eb0-b8c8-8dd4afa4fe92"><img width="244" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/5b677c6a-e37e-4fb5-9c22-a525657a09ae">
 
 
+# Model And Dataset avaiable at: https://drive.google.com/drive/folders/1pUP3vHJMDX6tOvCLClY4ZMrhAiy0n5Zc?usp=sharing
+
 
 
 # Architecture of ResNet152 
