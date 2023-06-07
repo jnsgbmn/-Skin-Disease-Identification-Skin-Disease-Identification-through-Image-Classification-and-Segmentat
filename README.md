@@ -1,5 +1,6 @@
 # Overview
 A cross platform based application that detect Viral skin lesions Disease. With machine learning technique. The aim of this project to reduce skin lession disease cases in our world.
+
 <img width="216" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/83d010f6-8636-4702-b195-29aacbc6342f">
 
 
