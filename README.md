@@ -1,5 +1,7 @@
 # Overview
 A cross platform based application that detect Viral skin lesions Disease. With machine learning technique. The aim of this project to reduce skin lession disease cases in our world.
+<img width="216" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/83d010f6-8636-4702-b195-29aacbc6342f">
+
 
 #Feature Extraction
 This involved creating two separate files: one for the dataset itself and another for labels. The dataset CSV file lists all the images in the skin diseases dataset along with their file paths and any additional relevant metadata. 
@@ -7,7 +9,8 @@ This involved creating two separate files: one for the dataset itself and anothe
 
 
 # Gaussian Noise applied in an Image
-![image](https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/9d0d4e10-cd83-491d-9a89-3e75b3c807d1)
+<img width="168" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/195134ce-c1f1-4eb0-b8c8-8dd4afa4fe92">
+
 
 
 # Architecture of ResNet152 
@@ -15,6 +18,7 @@ This involved creating two separate files: one for the dataset itself and anothe
 
 # Analysis Cases
 The system has a feature that utilizes the Global Viral skin diseases dataset from Kaggle for the purpose of analyzing cases. These datasets are displayed using an open-source library called plotly.js, which can be visualized in Jupiter notebook and integrated into the server.
- <img width="200" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/12d87abe-ab5b-44d6-bbb1-1ac708cea0cb">
+ <img width="200" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/12d87abe-ab5b-44d6-bbb1-1ac708cea0cb"><img width="200" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/cbd5c6ba-25c1-4690-b2da-0cb388a9c2ce">
+
 
 
