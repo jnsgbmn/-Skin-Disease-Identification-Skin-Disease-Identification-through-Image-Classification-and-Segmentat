@@ -19,7 +19,9 @@ This involved creating two separate files: one for the dataset itself and anothe
 
 # Analysis Cases
 The system has a feature that utilizes the Global Viral skin diseases dataset from Kaggle for the purpose of analyzing cases. These datasets are displayed using an open-source library called plotly.js, which can be visualized in Jupiter notebook and integrated into the server.
- <img width="200" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/12d87abe-ab5b-44d6-bbb1-1ac708cea0cb">
+
+ <img width="200" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/12d87abe-ab5b-44d6-bbb1-1ac708cea0cb"><img width="218" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/150ed763-4be7-4349-8548-0e485125be34">
+
 
 
 
