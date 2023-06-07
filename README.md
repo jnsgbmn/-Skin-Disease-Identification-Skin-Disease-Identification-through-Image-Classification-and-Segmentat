@@ -7,8 +7,6 @@ A cross platform based application that detect Viral skin lesions Disease. With 
 This involved creating two separate files: one for the dataset itself and another for labels. The dataset CSV file lists all the images in the skin diseases dataset along with their file paths and any additional relevant metadata. 
 ![image](https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/e521327a-2726-4cf2-ba41-5b76a41c1794)
 
-
-# Gaussian Noise applied in an Image
 <img width="168" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/195134ce-c1f1-4eb0-b8c8-8dd4afa4fe92"><img width="244" alt="image" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/5b677c6a-e37e-4fb5-9c22-a525657a09ae">
 
 
