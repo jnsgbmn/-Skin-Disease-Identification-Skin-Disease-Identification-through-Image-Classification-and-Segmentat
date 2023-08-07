@@ -8,7 +8,7 @@
 </p>
 
 ## Features
-- We use Architecture of ResNet-152 in this study. ResNet-152 is a type of neural network architecture used for image classification containing 152 layers.We use Gaussian Noise applied in an Image.
+- We use Architecture of ResNet-152 in this study. ResNet-152 is a type of neural network architecture used for image classification containing 152 layers.And we use Gaussian Noise applied in an Image.
 
 - Image augmentation is a technique that is used in computer vision to artificially increase the size of a training dataset by generating variations of existing images.The purpose of this technique is to enhance the diversity of the images used to train models in machine learning, which can lead to a better generalization on new, and unseen data.
 
