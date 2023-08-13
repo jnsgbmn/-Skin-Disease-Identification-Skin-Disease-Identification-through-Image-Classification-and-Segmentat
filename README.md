@@ -19,4 +19,7 @@
 
 - the WHO’s Viral Skin Diseases Analysis Cases, an HTML iframe element tag that embeds and interactive chart or table from the website ourworldindata.org. The chart is related to viral disease cases today and displays confirmed cases data over time, with options to filter by various metrics such as frequency and relative population. 
 
-##Archietecure 
+## Archietecure
+
+<img width="1041" alt="Face Mask Recognition Attendance system" src="https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/0a47244b-f596-4640-af3d-1be72014aa51">
+
