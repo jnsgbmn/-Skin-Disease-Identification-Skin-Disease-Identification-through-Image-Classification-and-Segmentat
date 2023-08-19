@@ -3,11 +3,8 @@
 
  <p align="center">
 
-
-
- </p>
-
-</p>
+## Archietecture Model
+![image](https://github.com/jnsgbmn/-Skin-Disease-Identification-Skin-Disease-Identification-through-Image-Classification-and-Segmentat/assets/102467227/502977e8-7c86-44c5-9eec-995706057c79)
 
 ## Features
 - We use Architecture of ResNet-152 in this study. ResNet-152 is a type of neural network architecture used for image classification containing 152 layers.And we use Gaussian Noise applied in an Image.
